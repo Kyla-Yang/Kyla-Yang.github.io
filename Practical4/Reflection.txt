@@ -1,0 +1,4 @@
+First, I failed to delete the old version of FortiClient, solving by 
+going to repair my computer. Second, when pushing, the vpn connection was 
+broken so I downloaded the desktop version. Third, I always make some 
+typing errors.
