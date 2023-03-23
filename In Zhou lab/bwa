@@ -11,7 +11,7 @@ for r1_file in ${r1_files[@]}; do
   echo "Processing R2 file: $r2_file"
   gzip -d $r1_file
   gzip -d $r2_file
-  bwa mem $genome ${sample_name}_1.fastq.gz ${sample_name}_2.fastq.gz > ${sample_name}.sam
+  bwa mem /public2/home/rotation/He_reseq/He_genome.fasta ${sample_name}_1.fastq.gz ${sample_name}_2.fastq.gz > ${sample_name}.sam
   samtools view -S -b ${sample_name}.sam > ${sample_name}.bam
   echo "Processing BAM file: ${sample_name}.bam"
   samtools sort ${sample_name}.bam -o ${sample_name}_sorted.bam
