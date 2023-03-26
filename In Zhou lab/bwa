@@ -20,3 +20,5 @@ for r1_file in ${r1_files[@]}; do
   rm ${sample_name}_2.fastq
   rm ${sample_name}.sam
 done
+
+conda deactivate
