@@ -1,5 +1,5 @@
 #found genome index
-genome="genome/fasta"
+genome="genome.fasta"
 bwa index genome
 
 #activate the independent environment for bwa
