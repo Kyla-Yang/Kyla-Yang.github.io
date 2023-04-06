@@ -1,10 +1,7 @@
-#found genome index
-genome="genome.fasta"
-bwa index genome
-
 #activate the independent environment for bwa
 conda activate bwa_env
 
+#found genome index
 genome="He_genome.fasta"
 bwa index $genome
 
