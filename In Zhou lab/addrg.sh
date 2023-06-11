@@ -1,3 +1,9 @@
+##GATK HaplotypeCaller ERROR
+#A USER ERROR has occurred: Argument emit-ref-confidence has a bad value: Can only be used in single sample mode currently. 
+#SOLUTION: using picard to add the reading group into BAM files
+#https://www.jianshu.com/p/de1c027e672b
+
+#Here is a for loop going through every raw BAM file in the folder.
 for f in /public2/home/rotation/yyn/He_reseq/fbam/*_sorted_rmdup.bam
 do
    echo "Processing $f file..."
