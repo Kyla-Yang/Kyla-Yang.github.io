@@ -1,6 +1,6 @@
 conda activate gatk_env
 #SNP
-for f in /public2/home/rotation/yyn/He_reseq/sorted_bam/Here.male *_sorted.bam
+for f in /public2/home/rotation/yyn/He_reseq/sorted_bam/mbam *_sorted.bam
 do
    echo "Processing $f file..."
    prefix=$(basename $f _sorted.bam)
