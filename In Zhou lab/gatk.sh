@@ -1,10 +1,9 @@
 conda activate gatk_env
 #SNP
-for f in /public2/home/rotation/yyn/He_reseq/sorted_bam/mbam *_sorted.bam
+for f in /public2/home/rotation/yyn/He_reseq/sorted_bam/mbam *_sorted_rmdup_addrg.bam
 do
    echo "Processing $f file..."
-   prefix=$(basename $f _sorted.bam)
-   sorted_rmdup_bam=${prefix}_sorted_rmdup.bam
+   prefix=$(basename $f _sorted_rmdup_addrg.bam)
    gatk HaplotypeCaller --native-pair-hmm-threads 4 -R /public2/home/rotation/yyn/He_genome.fasta -I $f -ERC GVCF --emit-ref-confidence GVCF -O ${prefix}_g.vcf.gz
    gatk CombineGVCFs --reference /public2/home/rotation/yyn/He_genome.fasta -V ${prefix}_g.vcf.gz -O ${prefix}.g.vcf.gz --spark-master local[4]
    gatk GenotypeGVCFs --reference /public2/home/rotation/yyn/He_genome.fasta -V ${prefix}.g.vcf.gz -O ${prefix}.raw.vcf.gz --spark-master local[8]
